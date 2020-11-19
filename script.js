@@ -291,7 +291,7 @@ var btnupdate =  ' <input class="button" name="edit" type="button" value="Edit I
 var arrays = addtocart[i];
 arrays = "'"+arrays+"'";
 //v 3.1 add edit button using below i index & name it btnpdate
-var btnaddlist =  '<input name="add" type="checkbox" id="adds" value="Add to Compliment List" onclick="addbacktoshoppinglist('+arrays+',' + i + ')" checked="checked"/>';
+var btnaddlist =  '<input name="add" type="checkbox" id="adds" value="Add to Compliment List!" onclick="addbacktoshoppinglist('+arrays+',' + i + ')" checked="checked"/>';
 TheRow =  "<li>" + addtocart[i] + btndelete + ' ' +  ' ' + btnaddlist + '</li>';
 TheList += TheRow;
 }
