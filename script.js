@@ -24,7 +24,7 @@ function get(name){
 //v4.1 ShareList via bitly api
 function passlist()
 {
- var url = "https://rvclist.github.io/rvclist15/index.html?list="+ shoppinglist;
+ var url = "https://ksolonlist.github.io/JAVASCRIPTweek15/"+ shoppinglist;
     var accessToken = "ef29371d053e80c154372200fbe458f7216ad23a";
 
     var params = {
