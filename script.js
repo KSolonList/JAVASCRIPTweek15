@@ -1,6 +1,6 @@
 //v3.4 Add popup describing app when visitors load webpage the first time
 window.onload = function() {
-    alert("Welcome to 'Shopping List' App!\n\nCreated by Rock Valley College\n**Javascript(Web233) Students**\n\nQuestions?\nemail Professor Chuck Konkol\nc.konkol@rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
+    alert("Welcome to 'Katy's Compliment List' App!\n\nCreated by Rock Valley College\n**Javascript(Web233) Students**\n\nQuestions?\nemail Professor Chuck Konkol\nc.konkol@rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
     populateshoppinglistonload();
     displayShoppinglists();
     clearFocus();
@@ -24,8 +24,8 @@ function get(name){
 //v4.1 ShareList via bitly api
 function passlist()
 {
- var url = "https://rvclist.github.io/rvclist15/index.html?list="+ shoppinglist;
-    var accessToken = "42b98acf810b1d5cb40024565ce6abf5b4e5437d";
+ var url = "https://ksolonlist.github.io/JAVASCRIPTweek15/index.html?list="+ shoppinglist;
+    var accessToken = "ef29371d053e80c154372200fbe458f7216ad23a";
 
     var params = {
         "long_url" : url           
@@ -71,7 +71,7 @@ function copyToClipboard(text) {
 
 function about()
 {
-    alert("Welcome to 'Shopping List' App!\n\nCreated by Rock Valley College\n**Javascript(Web233) Students**\n\nQuestions?\nemail Professor Chuck Konkol\nc.konkol@rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
+    alert("Welcome to 'Katy's Compliment List' App!\n\nCreated by Rock Valley College\n**Javascript(Web233) Students**\n\nQuestions?\nemail Professor Chuck Konkol\nc.konkol@rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
     
 }
 //read cookie and return
@@ -259,8 +259,8 @@ var btnupdate =  ' <input class="button" name="edit" type="button" value="Edit I
 //v 3.1 add edit button using below i index & name it btnpdate
 var arrays = shoppinglist[i];
 arrays = "'"+arrays+"'";
-var btnaddcart =  '<input name="add" type="checkbox" id="adds" value="Add to Shopping Cart" onclick="addtoshopcart('+arrays+','+ i +')" />';
-var btnsharelist = '<input class="button" id="shares" name="shares" type="submit" value="Share Shopping List" onclick="share()" />';
+var btnaddcart =  '<input name="add" type="checkbox" id="adds" value="Add to Compliment List" onclick="addtoshopcart('+arrays+','+ i +')" />';
+var btnsharelist = '<input class="button" id="shares" name="shares" type="submit" value="Share Compliment List" onclick="share()" />';
 TheRow = '<li>' + shoppinglist[i] + btndelete + ' '  + btnaddcart + '</li>';
 TheList += TheRow;
 }
@@ -291,13 +291,13 @@ var btnupdate =  ' <input class="button" name="edit" type="button" value="Edit I
 var arrays = addtocart[i];
 arrays = "'"+arrays+"'";
 //v 3.1 add edit button using below i index & name it btnpdate
-var btnaddlist =  '<input name="add" type="checkbox" id="adds" value="Add to Shopping List" onclick="addbacktoshoppinglist('+arrays+',' + i + ')" checked="checked"/>';
+var btnaddlist =  '<input name="add" type="checkbox" id="adds" value="Add to Compliment List!" onclick="addbacktoshoppinglist('+arrays+',' + i + ')" checked="checked"/>';
 TheRow =  "<li>" + addtocart[i] + btndelete + ' ' +  ' ' + btnaddlist + '</li>';
 TheList += TheRow;
 }
 if (arrayLength > 0)
 {
-  document.getElementById("labels").innerHTML = 'Purchased';
+  document.getElementById("labels").innerHTML = 'Compliment Completed!';
   document.getElementById("MyCart").innerHTML = '<ul>' + TheList + '</ul>';
 }else{
   document.getElementById("labels").innerHTML = '';
@@ -322,6 +322,11 @@ function deleteShoppingCart(position) {
   displayShoppinglists();
   displayShoppingCart();
 }
+
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
 
 
 
