@@ -1,6 +1,6 @@
 //v3.4 Add popup describing app when visitors load webpage the first time
 window.onload = function() {
-    alert("Welcome to 'Katy's Compliment List' App!\n\nCreated by Rock Valley College\n**Javascript(Web233) Students**\n\nQuestions?\nemail Professor Chuck Konkol\nc.konkol@rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
+    alert("Welcome to 'Katy's Compliment List' App!\n\nGive someone a compliment!\n**Check mark the box when the compliment is completed.**\n\nClick remove to delete a compliment.");
     populateshoppinglistonload();
     displayShoppinglists();
     clearFocus();
